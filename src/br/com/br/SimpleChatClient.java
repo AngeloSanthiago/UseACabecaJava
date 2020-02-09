@@ -5,16 +5,23 @@ import java.awt.event.ActionListener;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+import javax.swing.JFrame;
 import javax.swing.JTextField;
 
-public class SimpleChatClientA {
+public class SimpleChatClient {
 	JTextField outgoing;
 	PrintWriter writer;
 	Socket sock;
 
 	public void go() {
-		// cria a gui e registra um ouvinte no botão send
-		// chama o método setUpNetworking()
+		JFrame jFrame = new JFrame("Ludicrously simple chat Client");
+		jFrame.setVisible(true);
+		jFrame.setSize(400, 500);
+		try {
+			Thread.sleep(5000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	private void setUpNetworking() {
